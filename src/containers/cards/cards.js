@@ -7,9 +7,15 @@ class card extends React.Component {
     state={
         query: "",
         result: [],
+        isHidden: false
     }
 
     handleInputChange = () => {
+      if(this.state.query.length >1){
+        this.setState({isHidden: true})
+      }else{
+        this.setState({isHidden:false})
+      }
         this.setState({
           query: this.search.value
         }, () => {
@@ -31,6 +37,7 @@ class card extends React.Component {
       }
 
       selectedSuggestion = (value) => {
+        console.log(value);
         this.setState({
           query: value,
           result: []
@@ -40,19 +47,20 @@ class card extends React.Component {
     render(){
         return(
             <div className={classes.card}>
-                <img src="https://www.bigcheesebadges.co.uk/images/player_1.png"/>
-                <h4>player name</h4>
+              <div className={classes.image}>
+                <img src={this.props.image}/>
+              </div>
+                <h4>{this.props.player}</h4>
                 <p>Github Username</p>
-                <form>
+                <div className={classes.dropdown}> 
                     <input
                          placeholder="Search for..."
                          ref={input => this.search = input}
                         onChange={this.handleInputChange}
-                    >
-                    
-                    </input>
-                    <Suggestions results={this.state.result}/>
-                </form>
+                        value={this.state.query}
+                    />
+                    {this.state.isHidden ? <Suggestions click={this.selectedSuggestion} results={this.state.result}/> : null}
+                </div>
             </div>
         )
     }

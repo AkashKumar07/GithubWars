@@ -1,8 +1,9 @@
 import React from 'react'
 
 const Suggestions = (props) => {
+  console.log(props.results);
   const options = props.results.map(r => (
-    <li key={r.id}>
+    <li onClick={() => (props.click(r.login))} key={r.id}>
       {r.login}
     </li>
   ))
