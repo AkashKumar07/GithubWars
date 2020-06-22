@@ -29,6 +29,13 @@ class card extends React.Component {
             })
           })
       }
+
+      selectedSuggestion = (value) => {
+        this.setState({
+          query: value,
+          result: []
+        })
+      }
     
     render(){
         return(
@@ -44,7 +51,6 @@ class card extends React.Component {
                     >
                     
                     </input>
-
                     <Suggestions results={this.state.result}/>
                 </form>
             </div>
