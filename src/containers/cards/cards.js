@@ -30,7 +30,6 @@ class card extends React.Component {
         axios.get("https://api.github.com/search/users?q="+query)
           .then(({ data }) => {
             const result = data.items.slice(0,4);
-            console.log(result);
             this.setState({
               result: result
             })
@@ -38,7 +37,6 @@ class card extends React.Component {
       }
 
       selectedSuggestion = (value) => {
-        console.log(value);
         this.setState({
           query: value,
           result: []
