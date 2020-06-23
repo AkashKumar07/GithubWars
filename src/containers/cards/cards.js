@@ -7,8 +7,8 @@ class card extends React.Component {
     state={
         query: "",
         result: [],
-        isHidden: false
-    }
+        isHidden: false,
+      }
 
     handleInputChange = () => {
       if(this.state.query.length >1){
@@ -30,6 +30,7 @@ class card extends React.Component {
         axios.get("https://api.github.com/search/users?q="+query)
           .then(({ data }) => {
             const result = data.items.slice(0,4);
+            console.log(result);
             this.setState({
               result: result
             })
@@ -42,6 +43,7 @@ class card extends React.Component {
           query: value,
           result: []
         })
+        this.props.setplayer(value);
       }
     
     render(){
@@ -54,7 +56,7 @@ class card extends React.Component {
                 <p>Github Username</p>
                 <div className={classes.dropdown}> 
                     <input
-                         placeholder="Search for..."
+                         placeholder="Search..."
                          ref={input => this.search = input}
                         onChange={this.handleInputChange}
                         value={this.state.query}

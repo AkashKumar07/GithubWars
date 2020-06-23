@@ -4,3 +4,18 @@
     justify-content: center;
     margin-top: 100px;
 }
+
+.home button {
+    position: absolute;
+    bottom: 100px;
+    width: 432px;
+    height: 88px;
+    transform: skew(-20deg);
+    font-size: 2em;
+    background-color: #B2FFE6;
+}
+
+.home button:disabled{
+    background-color: #6A7874;
+    border-radius: 8px;
+}
