@@ -159,8 +159,6 @@ class game extends React.Component{
                     p2Wins = true;
                 }
 
-                console.log("winner", p1Wins, p2Wins);
-
                 card = (
                 <div className={classes.home}>
                 <GameCard 
