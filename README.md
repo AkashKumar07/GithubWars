@@ -1,3 +1,5 @@
+View the web app at https://githubwars-31f23.web.app/
+
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
 ## Available Scripts
