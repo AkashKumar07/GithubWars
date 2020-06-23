@@ -1,9 +1,10 @@
-import React from 'react'
+import React from 'react';
+import * as classes from './Suggestions.module.css';
 
 const Suggestions = (props) => {
   console.log(props.results);
   const options = props.results.map(r => (
-    <li onClick={() => (props.click(r.login))} key={r.id}>
+    <li className={classes.item} onClick={() => (props.click(r.login))} key={r.id}>
       @{r.login}
     </li>
   ))

@@ -50,7 +50,7 @@ class card extends React.Component {
         return(
             <div className={classes.card}>
               <div className={classes.image}>
-                <img src={this.props.image}/>
+                <img className={classes.mar} src={this.props.image}/>
               </div>
                 <h4>{this.props.player}</h4>
                 <p>Github Username</p>

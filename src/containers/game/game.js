@@ -188,6 +188,7 @@ class game extends React.Component{
         
         return(
             <div className={classes.home}>
+                <div className={classes.logo}><span>./Github</span><span>Wars</span></div>
                 {card}
             </div>
         )

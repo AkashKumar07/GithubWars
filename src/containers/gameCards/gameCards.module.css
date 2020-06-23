@@ -7,7 +7,6 @@
     transform: skew(-2deg);
     height: 520px;
     width: 498px;
-    overflow: hidden;
     padding-left: 20px;
     position: relative;
 }
@@ -25,6 +24,7 @@ p {
     border-image-slice: 1;
     border-top: 2.5px solid #B2FFE6;
     border-bottom: 5px solid #121212;
+    border-radius: 12px;
 }
 
 .card p {
@@ -39,7 +39,8 @@ p {
 .image {
     transform: rotate(2deg);
     position: absolute;
-    top: 0px;
+    top: -30px;
+    padding-top:10px ;
     margin-top: -10px;
     right: 50px;
     background-color: #B2FFE6;
@@ -51,6 +52,7 @@ p {
     width: 100px;
     transform: rotate(-2deg);
     padding: 10px;
+    padding-top: 5px;
 } 
 
 .card p{
@@ -75,6 +77,8 @@ p {
 
 .starsVal{
     padding-left: 65px;
+    color: rgb(240, 234, 234);
+    font-weight: 400;
 }
 
 .username{
@@ -84,4 +88,20 @@ p {
 
 .winner {
     color: #B2FFE6;
+    padding-left: 20px;
+    margin-top: -20px;
+    font-size: 24px;
+}
+
+.titles {
+    font-size: 1em;
+    font-style: italic;
+    padding-left: 5px;
+    color: rgb(172, 172, 172);
+    font-weight: 600;
+}
+
+.heading {
+    padding-top: 30px;
+    padding-left: 20px;
 }

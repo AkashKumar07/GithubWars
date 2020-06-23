@@ -35,6 +35,7 @@ class home extends React.Component {
         }
         return(
             <div className={classes.home}>
+                <div className={classes.logo}><span><b>./Github</b></span><span className={classes.git}><b>Wars</b></span></div>
                 <Card setplayer={this.player1} player="Player 1" image={player1}/>
                 <Card setplayer={this.player2} player="Player 2" image={player2}/>
                 <button onClick={this.buttonClicked} disabled={!act}>Start war</button>

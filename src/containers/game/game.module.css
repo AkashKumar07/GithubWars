@@ -2,7 +2,7 @@
     align-items: center;
     display: flex;
     justify-content: center;
-    margin-top: 25px;
+    margin-top: 40px;
 }
 
 .home button {
@@ -13,6 +13,14 @@
   transform: skew(-20deg);
   font-size: 2em;
   background-color: #B2FFE6;
+  color: #70bda4;
+  border-radius: 12px;
+}
+
+.logo{
+  position: fixed;
+  top: 30px;
+  left: 60px;
 }
 
 /* loader animation  */
@@ -29,7 +37,7 @@
 .loader {
   color: #ffffff;
   text-indent: -9999em;
-  margin: 88px auto;
+  margin: 250px auto;
   position: relative;
   font-size: 11px;
   -webkit-transform: translateZ(0);
